@@ -54,14 +54,11 @@ const PreviewForm: React.FC<PreviewFormProps> = ({
 				))}
 			</TabList>
 			<TabPanels
-				mt="5px"
-				ml="8px"
 				bg="white"
 				color="gray.600"
 				borderRadius="5px"
 				width="100%"
 				minHeight={60 + (50 * (data.form.length - 1) + 5 * data.form.length)}
-				padding="25px 16px"
 			>
 				{data.form.map((section, sectionIndex) => (
 					<TabPanel key={sectionIndex}>
@@ -78,17 +75,15 @@ const PreviewForm: React.FC<PreviewFormProps> = ({
 											case 'input':
 												return (
 													<FormControl
-														ml="18px"
 														key={columnIndex}
 														width={sizes[column.size]}
-														my="6px"
 													>
 														<FormLabel
 															htmlFor={column.name}
 															fontSize="sm"
 															color="gray.600"
 														>
-															{column.name || 'Label'}
+															{column.name || 'Field name'}
 														</FormLabel>
 														<Input
 															placeholder={column.name || 'Placeholder'}
@@ -103,17 +98,15 @@ const PreviewForm: React.FC<PreviewFormProps> = ({
 											case 'textarea':
 												return (
 													<FormControl
-														ml="18px"
 														key={columnIndex}
 														width={sizes[column.size]}
-														my="6px"
 													>
 														<FormLabel
 															htmlFor={column.name}
 															fontSize="sm"
 															color="gray.600"
 														>
-															{column.name || 'Label'}
+															{column.name || 'Field name'}
 														</FormLabel>
 														<Textarea
 															placeholder={column.name || 'Placeholder'}
@@ -129,8 +122,6 @@ const PreviewForm: React.FC<PreviewFormProps> = ({
 												return (
 													<FormControl
 														width={sizes[column.size]}
-														my="6px"
-														ml="18px"
 														key={columnIndex}
 													>
 														<FormLabel
@@ -138,7 +129,7 @@ const PreviewForm: React.FC<PreviewFormProps> = ({
 															fontSize="sm"
 															color="gray.600"
 														>
-															{column.name || 'Label'}
+															{column.name || 'Field name'}
 														</FormLabel>
 														<Select
 															height="35px"
@@ -163,8 +154,6 @@ const PreviewForm: React.FC<PreviewFormProps> = ({
 												return (
 													<FormControl
 														width={sizes[column.size]}
-														my="6px"
-														ml="18px"
 														key={columnIndex}
 													>
 														<FormLabel
@@ -172,7 +161,7 @@ const PreviewForm: React.FC<PreviewFormProps> = ({
 															fontSize="sm"
 															color="gray.600"
 														>
-															{column.name || 'Label'}
+															{column.name || 'Field name'}
 														</FormLabel>
 														<CheckboxGroup isInline name={column.name}>
 															{column.options &&
@@ -190,8 +179,6 @@ const PreviewForm: React.FC<PreviewFormProps> = ({
 												return (
 													<FormControl
 														width={sizes[column.size]}
-														my="6px"
-														ml="18px"
 														key={columnIndex}
 													>
 														<FormLabel
@@ -199,7 +186,7 @@ const PreviewForm: React.FC<PreviewFormProps> = ({
 															fontSize="sm"
 															color="gray.600"
 														>
-															{column.name || 'Label'}
+															{column.name || 'Field name'}
 														</FormLabel>
 														<RadioGroup name={column.name} isInline>
 															{column.options &&

@@ -539,7 +539,7 @@ const FormBuilder: React.FC = (): React.ReactElement => {
 													</Menu>
 													{columnIndex > 0 || rowIndex > 0 ? (
 														<IconButton
-															aria-label="Supprimer ligne"
+															aria-label="Delete row"
 															icon={<VscTrash color="white" size={22} />}
 															fontSize="xs"
 															fontWeight="bold"
@@ -563,16 +563,11 @@ const FormBuilder: React.FC = (): React.ReactElement => {
 										))}
 										{rowIndex < section.rows.length - 1 && (
 											<Flex mt="20px" width="100%" flex={1} align="center">
-												<Text
-													fontSize="xs"
-													color="purple.200"
-													opacity={0.3}
-													minWidth="100px"
-												>
+												<Text fontSize="xs" color="gray.600" width="60px">
 													New row
 												</Text>
 												<Divider
-													borderColor="gray.500"
+													borderColor="gray.600"
 													orientation="horizontal"
 													width="100%"
 												/>
@@ -584,7 +579,7 @@ const FormBuilder: React.FC = (): React.ReactElement => {
 							<Flex direction="column" align="center" ml="12px">
 								{sectionIndex > 0 && (
 									<IconButton
-										aria-label="Supprimer section"
+										aria-label="Delete section"
 										icon={<VscTrash color="white" size={22} />}
 										fontSize="xs"
 										fontWeight="bold"
@@ -599,7 +594,7 @@ const FormBuilder: React.FC = (): React.ReactElement => {
 									/>
 								)}
 								<IconButton
-									aria-label="Ajouter section"
+									aria-label="Add section"
 									icon={<IoAdd color="white" size={22} />}
 									color="white"
 									fontSize="xs"
@@ -617,21 +612,19 @@ const FormBuilder: React.FC = (): React.ReactElement => {
 							</Flex>
 						</Flex>
 					))}
-					<Flex alignSelf="flex-end" mt="30px">
-						<Button
-							onClick={(): Promise<void> => saveFormHandler()}
-							width="200px"
-							height="35px"
-							size="sm"
-							bg="green.400"
-							ml="22px"
-							color="white"
-							_hover={{ bg: 'green.400' }}
-							_focus={{ outline: 0, boxShadow: 'outline' }}
-						>
-							Submit
-						</Button>
-					</Flex>
+					<Button
+						onClick={(): Promise<void> => saveFormHandler()}
+						width="200px"
+						height="35px"
+						size="sm"
+						bg="green.400"
+						color="white"
+						_hover={{ bg: 'green.400' }}
+						_focus={{ outline: 0, boxShadow: 'outline' }}
+						alignSelf="flex-end"
+					>
+						Submit
+					</Button>
 				</Flex>
 			</Box>
 			<Box
