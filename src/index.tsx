@@ -1,16 +1,17 @@
-import { ColorModeScript } from "@chakra-ui/react"
-import * as React from "react"
-import ReactDOM from "react-dom"
-import { App } from "./App"
-import reportWebVitals from "./reportWebVitals"
-import * as serviceWorker from "./serviceWorker"
+import * as React from 'react'
+import ReactDOM from 'react-dom'
+import reportWebVitals from './reportWebVitals'
+import * as serviceWorker from './serviceWorker'
+import FormBuilder from './FormBuilder'
+import { ChakraProvider, theme } from '@chakra-ui/react'
 
 ReactDOM.render(
-  <React.StrictMode>
-    <ColorModeScript />
-    <App />
-  </React.StrictMode>,
-  document.getElementById("root"),
+	<React.StrictMode>
+		<ChakraProvider theme={theme} resetCSS>
+			<FormBuilder />
+		</ChakraProvider>
+	</React.StrictMode>,
+	document.getElementById('root'),
 )
 
 // If you want your app to work offline and load faster, you can change
