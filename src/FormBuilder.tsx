@@ -20,12 +20,14 @@ import {
 	MenuList,
 	MenuItem,
 	useToast,
+	Link,
 } from '@chakra-ui/react'
 
 import PreviewForm from './components/PreviewForm'
 
 import { VscTrash } from 'react-icons/vsc'
 import { IoAdd } from 'react-icons/io5'
+import { AiFillGithub } from 'react-icons/ai'
 
 import { FormType } from './interfaces'
 
@@ -236,9 +238,18 @@ const FormBuilder: React.FC = (): React.ReactElement => {
 				borderRadius="3px"
 				p="22px"
 			>
-				<Heading as="h1" fontSize="lg" color="gray.600">
-					Form Builder
-				</Heading>
+				<Flex align="center">
+					<Heading as="h1" fontSize="lg" color="gray.600">
+						Form Builder
+					</Heading>
+					<Link
+						href="https://github.com/adilhaddaoui/dynamic-form-builder"
+						target="_blank"
+						ml="12px"
+					>
+						<AiFillGithub size={28} />
+					</Link>
+				</Flex>
 				<Flex direction="column" mt="30px">
 					<FormControl width="100%">
 						<FormLabel htmlFor="formName" fontSize="sm" color="gray.600">
