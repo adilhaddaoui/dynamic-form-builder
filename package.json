@@ -2,6 +2,7 @@
 	"name": "dynamic-form-builder",
 	"version": "0.1.0",
 	"private": true,
+	"author": "contact@adilhaddaoui.com - www.adilhaddaoui.com",
 	"dependencies": {
 		"@chakra-ui/react": "^1.0.0",
 		"@emotion/react": "^11.0.0",
